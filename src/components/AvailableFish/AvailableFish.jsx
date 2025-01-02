@@ -1,9 +1,9 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 import { useEffect, useState } from "react"
 import SingleFish from "../SingleFish/SingleFish"
 
-const AvailableFish = () => {
+const AvailableFish = ({handleAddToCart}) => {
 
     const [fishes, setFishes] = useState([])
     useEffect(() => {
@@ -16,12 +16,14 @@ const AvailableFish = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-5">   
         {
-            fishes.map((fish) => <SingleFish key={fish.ID} fish={fish} ></SingleFish>)
+            fishes.map((fish) => <SingleFish handleAddToCart={handleAddToCart} key={fish.ID} fish={fish} ></SingleFish>)
         }
     </div>
   )
 }
 
-// AvailableFish.propTypes = {}
+AvailableFish.propTypes = {
+    handleAddToCart: PropTypes.func
+}
 
 export default AvailableFish
