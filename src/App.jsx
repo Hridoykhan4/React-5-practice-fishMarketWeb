@@ -8,8 +8,14 @@ import { toast } from "react-hot-toast";
 function App() {
   const [isActive, setIsActive] = useState(true);
   const [newfish, setNewFish] = useState([]);
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState(0);
 
+  const handleDelete = (id, money) => {
+    const remainingFishes = newfish.filter((fish) => fish.ID !== id);
+    console.log(remainingFishes);
+    setNewFish(remainingFishes);
+    setPrice((prev) => prev - money);
+  };
 
   const handleAddToCart = (fish) => {
     const isExist = newfish.find((f) => f.ID === fish.ID);
@@ -52,11 +58,10 @@ function App() {
   const handleActiveState = (status) => {
     if (status === "available") {
       setIsActive(true);
-      document.getElementById('all-fish').classList.remove('hidden')
-
+      document.getElementById("all-fish").classList.remove("hidden");
     } else {
       setIsActive(false);
-      document.getElementById('all-fish').classList.add('hidden')
+      document.getElementById("all-fish").classList.add("hidden");
     }
   };
 
@@ -65,6 +70,7 @@ function App() {
       <Header price={price} newfish={newfish}></Header>
       <Banner></Banner>
       <FishContainer
+        handleDelete={handleDelete}
         handleAddToCart={handleAddToCart}
         handleActiveState={handleActiveState}
         isActive={isActive}

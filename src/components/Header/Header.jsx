@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { search } from '../Utils/search';
+// import { search } from '../Utils/search';
 const Header = ({newfish, price}) => {
   return (
     <div className=" sticky top-0 z-20">
@@ -57,7 +57,7 @@ const Header = ({newfish, price}) => {
             />
           </div> */}
 
-          <button className='btn px-10 btn-error text-white'>Total: {price}</button>
+          <button className='btn px-10 btn-info text-white'>Total: {price}</button>
         </div>
       </div>
     </div>
@@ -65,7 +65,8 @@ const Header = ({newfish, price}) => {
 };
 
 Header.propTypes = {
-    newfish: PropTypes.array
+    newfish: PropTypes.array,
+    price: PropTypes.number
 };
 
 export default Header;
