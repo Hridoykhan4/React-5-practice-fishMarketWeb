@@ -75,33 +75,5 @@
     "price": 300,
     "image": "https://i.ibb.co.com/pZ6MBHh/0124532-deshi-puti-fish-300.jpg",
     "description": "Puti fish is a small freshwater fish known for its tender texture and delicious taste. It’s commonly cooked in spicy gravies or fried until crispy. Puti fish is packed with protein, calcium, and essential nutrients, supporting bone health and overall wellness. Its versatile flavor makes it a staple in traditional Bengali cuisine."
-  },
-  {
-    "ID": 12,
-    "name": "shing fish",
-    "price": 500,
-    "image": "https://i.ibb.co.com/S6z6C0M/shing-fish.jpg",
-    "description": "Shing fish is a freshwater delicacy known for its soft flesh and distinct taste. Rich in protein and low in fat, it’s often cooked in spicy gravies. Shing fish is also valued for its medicinal properties and is believed to boost energy and improve immunity. It’s a favorite in traditional Bengali dishes."
-  },
-  {
-    "ID": 13,
-    "name": "mrigal fish",
-    "price": 350,
-    "image": "https://i.ibb.co.com/X5FpQL2/mrigal-fish.jpg",
-    "description": "Mrigal fish is a popular freshwater species with a mild, delicate taste. Known for its flaky texture, it’s often used in curries and fish fries. Packed with protein and essential vitamins, it contributes to a balanced diet. Its light flavor makes it a favorite among seafood enthusiasts looking for a healthier alternative."
-  },
-  {
-    "ID": 14,
-    "name": "bhetki fish",
-    "price": 900,
-    "image": "https://i.ibb.co.com/7V7BcQp/bhetki-fish.jpg",
-    "description": "Bhetki fish, also known as Barramundi, is prized for its tender, white meat and mild flavor. It’s perfect for grilling, frying, or preparing rich curries. High in omega-3 fatty acids, it supports heart health and brain function, making it a nutritious choice."
-  },
-  {
-    "ID": 15,
-    "name": "ilish fish",
-    "price": 1600,
-    "image": "https://i.ibb.co.com/cw5G6Vk/ilish-fish.jpg",
-    "description": "Ilish fish, a delicacy in South Asian cuisine, is loved for its rich, oily texture. Typically cooked with mustard sauce, it’s packed with omega-3 fatty acids, supporting heart and brain health. A cultural symbol in Bengali celebrations."
   }
 ]
