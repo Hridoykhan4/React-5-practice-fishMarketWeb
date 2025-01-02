@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-const Cart = ({ newfish, handleDelete }) => {
+const Cart = ({ newfish, handleDelete, handleActiveState }) => {
   return (
     <div>
       <h3 className="text-2xl my-4 font-black">Thanks For Visiting Us🥰🥰</h3>
-      {newfish.map((fish) => (
-        <div className="" key={fish.ID}>
+      {newfish.map((fish, idx) => (
+        <div className="" key={idx}>
           <div className="shadow-lg flex justify-between px-2 items-center py-4 my-3 space-y-4 bg-white text-black">
             <div className="flex items-center gap-3 ">
               <div>
@@ -19,18 +19,31 @@ const Cart = ({ newfish, handleDelete }) => {
               </div>
             </div>
             <div>
-              <button onClick={() => handleDelete(fish.ID, fish.price)} className="btn btn-error px-9 text-white">Delete</button>
+              <button
+                onClick={() => handleDelete(fish.ID, fish.price)}
+                className="btn btn-error px-9 text-white"
+              >
+                Delete
+              </button>
             </div>
           </div>
         </div>
       ))}
+
+      <button
+        onClick={() => handleActiveState("available")}
+        className="btn bg-lime-600 text-white font-bold hover:bg-success"
+      >
+        Want to buy more !!
+      </button>
     </div>
   );
 };
 
 Cart.propTypes = {
   newfish: PropTypes.array,
-  handleDelete: PropTypes.func
+  handleDelete: PropTypes.func,
+  handleActiveState: PropTypes.func,
 };
 
 export default Cart;

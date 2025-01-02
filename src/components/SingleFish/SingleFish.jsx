@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 
 const SingleFish = ({fish, handleAddToCart}) => {
     const {name, price,image,description} = fish
+document.getElementById('spinner-control').classList.add('hidden')
+
   return (  
     <div id="id" className="card card-compact shadow-xl">
     <figure className='h-56'>
@@ -18,9 +20,8 @@ const SingleFish = ({fish, handleAddToCart}) => {
        </div>
     </div>
   </div>
-  )
+)
 }
-
 SingleFish.propTypes = {
     fish: PropTypes.object,
     handleAddToCart: PropTypes.func

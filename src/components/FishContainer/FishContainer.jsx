@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Cart from "../Cart/Cart";
 import AvailableFish from "../AvailableFish/AvailableFish";
 
-const FishContainer = ({ isActive, handleActiveState, handleAddToCart, newfish, handleDelete }) => {
+const FishContainer = ({ isActive, handleActiveState, handleAddToCart, newfish, handleDelete, setNewFish, setPrice }) => {
   return (
     <div className="w-11/12 mb-5 mx-auto">
       <div className=" flex justify-between items-center">
@@ -24,7 +24,7 @@ const FishContainer = ({ isActive, handleActiveState, handleAddToCart, newfish, 
       </div>
 
      {
-        isActive ? <AvailableFish handleAddToCart={handleAddToCart}></AvailableFish> : <Cart handleDelete={handleDelete} newfish={newfish}></Cart>
+        isActive ? <AvailableFish setPrice={setPrice} setNewFish={setNewFish} handleAddToCart={handleAddToCart}></AvailableFish> : <Cart isActive={isActive} handleDelete={handleDelete} handleActiveState={handleActiveState} newfish={newfish}></Cart>
      }
 
 
@@ -37,7 +37,9 @@ FishContainer.propTypes = {
   handleActiveState: PropTypes.func,
   handleAddToCart: PropTypes.func,
   newfish: PropTypes.array,
-  handleDelete: PropTypes.func
+  handleDelete: PropTypes.func,
+  setNewFish: PropTypes.func,
+  setPrice: PropTypes.func
 };
 
 export default FishContainer;
