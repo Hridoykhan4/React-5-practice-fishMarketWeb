@@ -32,23 +32,19 @@ function App() {
         duration: 2000,
         position: "right-top",
 
-        // Styling
         style: {},
         className: "h-20",
 
-        // Change colors of success/error/loading icon
         iconTheme: {
-          primary: "#F44336", // Error icon color
-          secondary: "#FFCDD2", // Secondary shade for the icon
+          primary: "#F44336",
+          secondary: "#FFCDD2",
         },
 
-        // Aria
         ariaProps: {
           role: "status",
           "aria-live": "polite",
         },
 
-        // Additional Configuration
         removeDelay: 1000,
       });
     } else {
@@ -56,7 +52,7 @@ function App() {
       addToLS(fish.ID);
       setPrice((prev) => prev + fish.price);
       toast.success("Successfully Added To The Cart,Sir!!!", {
-        duration: 1000,
+        duration: 2000,
         position: "right top",
 
         className: "h-20 font-bold",
@@ -67,10 +63,8 @@ function App() {
   const handleActiveState = (status) => {
     if (status === "available") {
       setIsActive(true);
-      document.getElementById("all-fish").classList.remove("hidden");
     } else {
       setIsActive(false);
-      document.getElementById("all-fish").classList.add("hidden");
     }
   };
 
@@ -79,7 +73,7 @@ function App() {
       <Header price={price} newfish={newfish}></Header>
       <Banner></Banner>
       <div className="text-center hidden" id="spinner-control">
-      <span className="loading w-20 loading-spinner"></span>
+        <span className="loading w-20 loading-spinner"></span>
       </div>
       <FishContainer
         handleDelete={handleDelete}
@@ -94,9 +88,5 @@ function App() {
     </>
   );
 }
-
-
-
-
 
 export default App;

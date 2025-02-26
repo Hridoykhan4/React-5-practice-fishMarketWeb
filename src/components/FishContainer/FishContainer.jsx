@@ -11,8 +11,6 @@ const FishContainer = ({
   setNewFish,
   setPrice,
 }) => {
-   
-
   return (
     <div className="w-11/12 mb-5 mx-auto">
       <div className=" flex justify-between items-center">
@@ -34,8 +32,6 @@ const FishContainer = ({
           </button>
         </div>
       </div>
-
-    
 
       {isActive ? (
         <AvailableFish

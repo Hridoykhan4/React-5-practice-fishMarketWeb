@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 // import { search } from '../Utils/search';
-const Header = ({newfish, price}) => {
+const Header = ({ newfish, price }) => {
   return (
     <div className=" sticky top-0 z-20">
       <div className=" navbar shadow-lg backdrop-blur-lg p-3">
@@ -47,17 +47,16 @@ const Header = ({newfish, price}) => {
             3 Star Fish Traders
           </a>
         </div>
-        <div style={{boxShadow: '10px 10px 10px rgba(0,0,0,0.5)'}} className="navbar-center btn bg-black text-white ring shadow-lg px-10 hidden lg:flex font-bold text-xl">Cart : {newfish.length}</div>
+        <div
+          style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.5)" }}
+          className="navbar-center btn bg-black text-white ring shadow-lg px-10 hidden lg:flex font-bold text-xl"
+        >
+          Cart : {newfish.length}
+        </div>
         <div className="navbar-end">
-          {/* <div className="form-control hidden md:flex" >
-            <input id="search-box" onClick={() => search()}
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-24 md:w-auto"
-            />
-          </div> */}
-
-          <button className='btn px-10 btn-info text-white'>Total: {price}</button>
+          <button className="btn px-10 btn-info text-white">
+            Total: {price}
+          </button>
         </div>
       </div>
     </div>
@@ -65,8 +64,8 @@ const Header = ({newfish, price}) => {
 };
 
 Header.propTypes = {
-    newfish: PropTypes.array,
-    price: PropTypes.number
+  newfish: PropTypes.array,
+  price: PropTypes.number,
 };
 
 export default Header;

@@ -9,7 +9,7 @@ const AvailableFish = ({ handleAddToCart, setNewFish, setPrice }) => {
   const [tempFish, setTempFish] = useState([]);
   useEffect(() => {
     document.getElementById("spinner-control").classList.remove("hidden");
-    fetch("./fish.json")
+    fetch("fish.json")
       .then((res) => res.json())
       .then((data) => {
         setFishes(data);
@@ -24,7 +24,6 @@ const AvailableFish = ({ handleAddToCart, setNewFish, setPrice }) => {
       let price = 0;
       for (const element of storedItems) {
         const fish = fishes.find((fish) => fish.ID === element);
-        // console.log(fish);
         price += fish.price;
         savedItems.push(fish);
       }
@@ -35,12 +34,11 @@ const AvailableFish = ({ handleAddToCart, setNewFish, setPrice }) => {
   }, [tempFish]);
 
   const handleSearch = (e) => {
-    const targetValue = e.target.value.toLowerCase();
-
+    const targetValue = e.target.value;
     if (targetValue) {
       let filtered = [];
       for (const e of tempFish) {
-        if (e.name.toLowerCase().includes(targetValue)) {
+        if (e.name.toLowerCase().includes(targetValue.toLowerCase())) {
           filtered.push(e);
         }
       }
@@ -58,7 +56,7 @@ const AvailableFish = ({ handleAddToCart, setNewFish, setPrice }) => {
         type="text"
         onKeyUp={(e) => handleSearch(e)}
         placeholder="Search Fish"
-        className="input input-bordered"
+        className="input input-bordered mt-5"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-5">
