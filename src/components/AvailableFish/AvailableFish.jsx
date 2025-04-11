@@ -20,6 +20,7 @@ const AvailableFish = ({ handleAddToCart, setNewFish, setPrice }) => {
   useEffect(() => {
     if (tempFish.length) {
       const storedItems = getStoredItems();
+      console.log(storedItems)
       const savedItems = [];
       let price = 0;
       for (const element of storedItems) {
