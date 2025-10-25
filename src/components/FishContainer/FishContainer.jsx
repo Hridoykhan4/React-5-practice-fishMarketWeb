@@ -6,7 +6,7 @@ const FishContainer = ({
   isActive,
   handleActiveState,
   handleAddToCart,
-  newfish,
+  newFish,
   handleDelete,
   setNewFish,
   setPrice,
@@ -20,15 +20,17 @@ const FishContainer = ({
         <div className="flex gap-5">
           <button
             onClick={() => handleActiveState("available")}
-            className={`${isActive ? "btn-primary btn" : "btn"}`}
+            className={`${
+              isActive ? "btn-primary btn" : "btn"
+            } duration-700 transition-all`}
           >
             Available
           </button>
           <button
             onClick={() => handleActiveState("false")}
-            className={`${isActive ? "btn" : "btn btn-primary"}`}
+            className={`${isActive ? "btn" : "btn btn-primary"} duration-500`}
           >
-            Cart List ({newfish.length})
+            Cart List ({newFish.length})
           </button>
         </div>
       </div>
@@ -44,7 +46,7 @@ const FishContainer = ({
           isActive={isActive}
           handleDelete={handleDelete}
           handleActiveState={handleActiveState}
-          newfish={newfish}
+          newFish={newFish}
         ></Cart>
       )}
     </div>
@@ -55,7 +57,7 @@ FishContainer.propTypes = {
   isActive: PropTypes.bool,
   handleActiveState: PropTypes.func,
   handleAddToCart: PropTypes.func,
-  newfish: PropTypes.array,
+  newFish: PropTypes.array,
   handleDelete: PropTypes.func,
   setNewFish: PropTypes.func,
   setPrice: PropTypes.func,

@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 
-const Cart = ({ newfish, handleDelete, handleActiveState }) => {
+const Cart = ({ newFish, handleDelete, handleActiveState }) => {
   return (
     <div>
-      <h3 className="md:text-2xl my-7 font-semibold md:font-black">Thanks For Visiting Us🥰🥰</h3>
-      {newfish.map((fish, idx) => (
-        <div className="" key={idx}>
+      <h3 className="md:text-2xl my-7 font-semibold md:font-black">
+        Thanks For Visiting Us🥰🥰
+      </h3>
+      {newFish.map((fish, idx) => (
+        <div key={idx}>
           <div className="shadow-lg flex justify-between px-2 items-center py-4 my-3 space-y-4 bg-white text-black">
             <div className="flex items-center gap-3 ">
               <div>
@@ -41,7 +43,7 @@ const Cart = ({ newfish, handleDelete, handleActiveState }) => {
 };
 
 Cart.propTypes = {
-  newfish: PropTypes.array,
+  newFish: PropTypes.array,
   handleDelete: PropTypes.func,
   handleActiveState: PropTypes.func,
 };

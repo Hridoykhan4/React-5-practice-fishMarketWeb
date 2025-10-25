@@ -2,12 +2,11 @@ import PropTypes from "prop-types";
 
 const SingleFish = ({ fish, handleAddToCart }) => {
   const { name, price, image, description } = fish;
-  document.getElementById("spinner-control").classList.add("hidden");
 
   return (
-    <div id="id" className="card card-compact shadow-xl">
+    <div className="card card-compact shadow-xl">
       <figure className="h-56">
-        <img className="w-full h-full object-cover" src={image} alt="Shoes" />
+        <img className="w-full h-full object-cover" src={image} alt={name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-black">{name}</h2>

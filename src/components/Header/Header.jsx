@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 // import { search } from '../Utils/search';
-const Header = ({ newfish, price }) => {
+const Header = ({ newFish, price }) => {
   return (
     <div className=" sticky top-0 z-20">
       <div className=" navbar shadow-lg backdrop-blur-lg p-3">
@@ -38,7 +38,7 @@ const Header = ({ newfish, price }) => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
+          <a className="btn  text-xl">
             <img
               className="w-10 object-cover shrink-0 rounded-full"
               src={"./logo.webp"}
@@ -51,7 +51,7 @@ const Header = ({ newfish, price }) => {
           style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.5)" }}
           className="navbar-center btn bg-black text-white ring shadow-lg px-10 hidden lg:flex font-bold text-xl"
         >
-          Cart : {newfish.length}
+          Cart : {newFish?.length}
         </div>
         <div className="navbar-end">
           <button className="btn px-10 btn-info text-white">
@@ -64,7 +64,7 @@ const Header = ({ newfish, price }) => {
 };
 
 Header.propTypes = {
-  newfish: PropTypes.array,
+  newFish: PropTypes.array,
   price: PropTypes.number,
 };
 

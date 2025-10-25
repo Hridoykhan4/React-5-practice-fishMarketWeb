@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="w-11/12 px-4  mx-auto my-8  bg-[linear-gradient(135deg,rgba(0,0,0,0.2)_20%,rgba(0,0,0,0.4)_50%,transparent_80%),url('/banner-fish.jpg')] bg-blend-overlay  bg-cover bg-right rounded-lg shadow-lg">
+    <div className="w-11/12 px-4  mx-auto my-8  bg-[linear-gradient(135deg,rgba(0,0,0,0.2)_20%,rgba(0,0,0,0.4)_50%,transparent_80%),url('/banner-fish.jpg')] bg-blend-overlay bg-cover bg-right rounded-lg shadow-lg">
       <div className="md:h-[100vh] h-[100vh] justify-center  md:py-0 flex-col space-y-5 text-white flex text-center">
         <h3 className="font-bold text-3xl">Buy Fresh Fishes From FishPalace</h3>
         <p className="font-semibold">

@@ -9,12 +9,11 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isActive, setIsActive] = useState(true);
-  const [newfish, setNewFish] = useState([]);
+  const [newFish, setNewFish] = useState([]);
   const [price, setPrice] = useState(0);
 
   const handleDelete = (id, money) => {
-    const remainingFishes = newfish.filter((fish) => fish.ID !== id);
-    console.log(remainingFishes);
+    const remainingFishes = newFish.filter((fish) => fish.ID !== id);
     toast.success("Succesfully Removed From Cart", {
       duration: 3000,
       position: "bottom right",
@@ -26,7 +25,7 @@ function App() {
   };
 
   const handleAddToCart = (fish) => {
-    const isExist = newfish.find((f) => f.ID === fish.ID);
+    const isExist = newFish.find((f) => f.ID === fish.ID);
     if (isExist) {
       toast.error("Can Not Add A Cart twice!!!", {
         duration: 2000,
@@ -48,7 +47,7 @@ function App() {
         removeDelay: 1000,
       });
     } else {
-      setNewFish([...newfish, fish]);
+      setNewFish([...newFish, fish]);
       addToLS(fish.ID);
       setPrice((prev) => prev + fish.price);
       toast.success("Successfully Added To The Cart,Sir!!!", {
@@ -70,17 +69,15 @@ function App() {
 
   return (
     <>
-      <Header price={price} newfish={newfish}></Header>
+      <Header price={price} newFish={newFish}></Header>
       <Banner></Banner>
-      <div className="text-center hidden" id="spinner-control">
-        <span className="loading w-20 loading-spinner"></span>
-      </div>
+
       <FishContainer
         handleDelete={handleDelete}
         handleAddToCart={handleAddToCart}
         handleActiveState={handleActiveState}
         isActive={isActive}
-        newfish={newfish}
+        newFish={newFish}
         setNewFish={setNewFish}
         setPrice={setPrice}
       ></FishContainer>
